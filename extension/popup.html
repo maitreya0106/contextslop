@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body { width: 320px; margin: 0; padding: 14px; font: 13px -apple-system, system-ui, sans-serif; color: #0f1419; }
+    h1 { font-size: 15px; margin: 0 0 10px; display: flex; justify-content: space-between; align-items: center; }
+    #status { font-size: 11px; font-weight: normal; color: #536471; }
+    #status.ok::before { content: "● "; color: #00ba7c; }
+    #status.bad::before { content: "● "; color: #f4212e; }
+    label { display: block; font-weight: 600; margin: 8px 0 4px; }
+    input, textarea { width: 100%; box-sizing: border-box; padding: 7px 8px; border: 1px solid #cfd9de; border-radius: 6px; font: inherit; }
+    textarea { height: 54px; resize: vertical; }
+    button { margin-top: 12px; width: 100%; padding: 9px; border: 0; border-radius: 999px; background: #0f1419; color: #fff; font-weight: 600; cursor: pointer; }
+    button:disabled { opacity: .5; }
+    #msg { margin-top: 8px; min-height: 16px; font-size: 12px; }
+    .hint { color: #536471; font-size: 11px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>ContextSlop <span id="status">checking…</span></h1>
+  <label for="url">Post link</label>
+  <input id="url" placeholder="https://x.com/user/status/123…" />
+  <label for="note">Note</label>
+  <textarea id="note" placeholder="Why is this useful?"></textarea>
+  <label for="tags">Tags</label>
+  <input id="tags" placeholder="react, prompts, tools" />
+  <button id="save">Save</button>
+  <div id="msg"></div>
+  <div class="hint">Tip: on x.com, use the save icon in each post's action bar. Shift-click it to add a note.</div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "contextslop",
+  "version": "0.1.0",
+  "description": "Save X/Twitter posts from your browser into a local store that Claude Code and Claude desktop can search.",
+  "private": true,
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server/server.js",
+    "mcp": "node server/mcp.js",
+    "setup": "node setup.js",
+    "autostart": "node server/install-launchd.js",
+    "register-desktop": "node server/register-desktop.js"
+  }
+}

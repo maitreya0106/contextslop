@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "ContextSlop — Save X posts",
+  "version": "0.1.0",
+  "description": "Save X/Twitter posts to a local file that Claude Code can read.",
+  "permissions": ["activeTab", "contextMenus", "clipboardRead"],
+  "host_permissions": ["http://127.0.0.1:7777/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Save to ContextSlop" },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*", "https://mobile.x.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

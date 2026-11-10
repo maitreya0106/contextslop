@@ -1,0 +1,6 @@
+# Your saved posts and logs — personal, never commit
+data/
+
+.DS_Store
+node_modules/
+*.log
